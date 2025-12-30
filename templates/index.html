@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 mb-4">
+            <i class="fas fa-parking text-primary"></i>
+            Vehicle Parking Management
+        </h1>
+        <p class="lead mb-4">Efficient parking spot management for administrators and users</p>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-user-shield text-primary"></i> Admin Access
+                        </h5>
+                        <p class="card-text">Manage parking lots, spots, and view system statistics</p>
+                        <a href="{{ url_for('login') }}" class="btn btn-primary">Admin Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-user text-success"></i> User Access
+                        </h5>
+                        <p class="card-text">Book and manage your parking reservations</p>
+                        <a href="{{ url_for('login') }}" class="btn btn-success me-2">Login</a>
+                        <a href="{{ url_for('register') }}" class="btn btn-outline-success">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
